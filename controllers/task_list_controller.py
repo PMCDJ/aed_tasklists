@@ -1,10 +1,16 @@
+from aed_ds.dictionaries.hash_table import HashTable
+from models.users import User
 class TaskListController:
     
+    def __init__(self):
+        self.users = HashTable()
+    
     def has_user(self, user_name):
-        pass
+        self.users.has_key(user_name)
 
     def add_user(self, user_name):
-        pass
+        user = User(user_name)
+        self.users.insert(user_name, user)
 
     def remove_user(self, user_name):
         pass
