@@ -13,7 +13,8 @@ class TaskListController:
         self.users.insert(user_name, user)
 
     def remove_user(self, user_name):
-        pass
+        user = User(user_name)
+        self.users.remove(user_name,user)
     
     def has_users(self):
         pass
